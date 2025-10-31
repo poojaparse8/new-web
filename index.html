@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content />
+    <meta name="keywords" content>
+    <meta name="title" content>
+    <meta name="robots" content="index, follow">
+    <title></title>
+    <link rel="canonical" href />
+    <link rel="icon" href type="image/x-icon">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- <link rel="stylesheet" href="css/develop.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+    
+.new-highlights{
+  margin-bottom: 100px;
+}
+    .nearby-locations {
+  /* background-color: #fff; */
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.category {
+  margin-bottom: 20px;
+}
+
+.category h5 {
+  font-size: 16px;
+  color: #a61e22;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category i {
+  color: #a61e22;
+  font-size: 18px;
+}
+
+.category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #444;
+  padding: 3px 0;
+}
+
+.category ul li span {
+  color: #000;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .category ul li {
+    font-size: 12px;
+  }
+}
+
+   .color-txt{
+    color: #A72703;
+    font-weight: 600;
+   }
+    .art2{
+       width: 25px;
+  height: 20px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-color: #000;
+      clip-path: polygon(100% 1%, 1% 0, 53% 100%);
+    }
+   .art { 
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-color: #000;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+    /* Custom 5-column layout */
+.col-custom {
+  flex: 0 0 20%;
+  max-width: 20%;
+  /* padding: 10px; */
+  position: relative;
+  background-color: #f7f2ee;
+}
+
+@media (max-width: 992px) {
+  .col-custom {
+    flex: 0 0 33.33%; /* 3 per row on tablets */
+    max-width: 33.33%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-custom {
+    flex: 0 0 50%; /* 2 per row on mobile */
+    max-width: 50%;
+  }
+}
+
+.img {
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 10px; */
+}
+
+.img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  /* border-radius: 10px; */
+  transition: transform 0.4s ease;
+}
+
+.img:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 500;
+  border-radius: 0 0 10px 10px;
+}
+
+     #info {
+      position: relative;
+      /* height: 100vh; */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 60px 0px;
+    }
+
+    .content p {
+      max-width: 90vw;
+      color: white;
+      z-index: 2;
+      position: relative;
+    }
+
+    .vCurtain {
+      /* --colorFill: rgba(0, 0, 0, 1);
+      --colorTransparent: rgba(0, 0, 0, 0); */
+      --left: 50%;
+      --right: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(
+        90deg,
+        var(--colorFill) 0,
+        var(--colorFill) var(--left),
+        var(--colorTransparent) var(--left),
+        var(--colorTransparent) var(--right),
+        var(--colorFill) var(--right),
+        var(--colorFill) 100%
+      );
+    }
+
+    .image-overlay-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .image-overlay-wrapper img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .abc-amenities {
+      /* padding-bottom: 60px; */
+    }
+
+    .outer-circle {
+
+      border: 50px solid rgb(18, 19, 19);
+      border-radius: 50%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      background-color: white;
+    }
+
+    .award-box {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .award-box-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+
+    .rounded-circle {
+      box-shadow: inset 0 0 10px rgba(24, 24, 24, 0.3);
+    }
+
+    .award-box-inner img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      /* box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); */
+      transition: opacity 0.3s ease;
+    }
+
+
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur();
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .lock-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .lock-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      height: 380px;
+      margin: auto;
+      overflow: hidden;
+      background: black;
+    }
+
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 1;
+    }
+
+    .contact-section {
+      background-color: #000;
+      padding: 50px 0px;
+      color: white;
+
+    }
+
+    .contact-section h2 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      color: #ccc;
+    }
+
+    .info-box h5 {
+      /* margin-bottom: 10px; */
+      font-weight: 600;
+    }
+
+    .info-box p {
+      color: #ccc;
+      margin: 0;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #f4a261;
+    }
+
+    .form-control,
+    .form-control:focus,
+    textarea.form-control {
+      /* background-color: #2c2c2c; */
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    .btn-submit {
+      background-color: #f4a261;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-submit:hover {
+      background-color: #e07a5f;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    input::placeholder {
+      font-size: 14px;
+    }
+
+
+    @media (max-width: 767px) {
+      .map-container {
+        height: 250px;
+        margin-top: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .map-container {
+        height: 310px;
+      }
+
+    }
+
+    .image-container3 {
+      width: 300px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
+
+    .scale-right {
+      width: 100%;
+      transform-origin: left center;
+      animation: scaleToRight 2s ease-in-out forwards;
+    }
+
+    @keyframes scaleToRight {
+      0% {
+        transform: scaleX(1);
+      }
+
+      100% {
+        transform: scaleX(1.2);
+      }
+    }
+  </style>
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WMCMW967');
+  </script>
+
+  </head>
+
+  <body>
+
+    <!-- banner -->
+    <!-- <div><h1>pooja</h1></div> -->
+    <div class="wrapper">
+      <nav
+        class="navbar navbar-expand-lg navbar-light  px-lg-3 py-lg-3 sticky-top z-1 position-absolute w-100">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./images/illustration/logo.webp"
+              width="120px"
+              alt="Luxe 28 Logo" />
+          </a>
+          <button class="navbar-toggler outline-none" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto text-center">
+              <li class="nav-item borderLine">
+                <a class="nav-link anim-link fw-bold active"
+                  href="#home">Home</a>
+              </li>
+              <li class="nav-item borderLine mx-lg-3">
+                <a class="nav-link anim-link fw-bold" href="#about">About Us</a>
+              </li>
+              <li class="nav-item borderLine">
+                <a class="nav-link anim-link fw-bold"
+                  href="#Amenities">Amenities</a>
+              </li>
+              <li class="nav-item borderLine  mx-lg-3">
+                <a class="nav-link anim-link fw-bold"
+                  href="#Gallery">Gallery</a>
+              </li>
+              <li class="nav-item borderLine">
+                <a class="nav-link anim-link fw-bold" href="#Site_Plan">Floor
+                  Plan</a>
+              </li>
+              <li class="nav-item borderLine  ms-lg-3">
+                <a class="nav-link anim-link fw-bold"
+                  href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="zoom-banner">
+      </div>
+
+    </div>
+
+    <!-- avilability form -->
+    <div class="container  mb-5 ">
+      <div class="row gx-1">
+        <div class="col-lg-12 bg-white shadow p-4 rounded">
+          <form action="./site-visit.php" method="post" id="siteForm">
+            <div class="row align-items-end">
+
+              <!-- Name -->
+              <div class="col-lg-6 mb-2 mb-lg-3">
+                <input
+                  type="text"
+                  class="form-control shadow-none text-dark"
+                  name="name"
+                  placeholder="Enter Name"
+                  required
+                  pattern="^[A-Za-z\s]{2,50}$"
+                  title="Only letters and spaces allowed (2-50 characters)" />
+              </div>
+
+              <input type="hidden" name="extract">
+
+              <!-- Contact No -->
+              <div class="col-lg-6 mb-2 mb-lg-3">
+                <input
+                  type="tel"
+                  class="form-control shadow-none text-dark"
+                  name="contact"
+                  placeholder="Enter Contact No."
+                  required
+                  pattern="^\d{10}$"
+                  title="Enter a 10-digit contact number" />
+              </div>
+
+              <!-- Email -->
+              <div class="col-lg-4 mb-2 mb-lg-0">
+                <input
+                  type="email"
+                  class="form-control shadow-none text-dark"
+                  name="email"
+                  placeholder="Enter Email Id"
+                  required
+                  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Enter a valid email address" />
+              </div>
+
+              <!-- Captcha -->
+              <div class="col-lg-4 mb-2 mb-lg-0 d-flex">
+                <div class="d-flex justify-content-center align-items-center">
+
+                  <span id="captchaCodeLabel" class="text-dark "
+                    style="font-weight: bold; display: inline; padding: 5px 10px; border-radius: 5px; letter-spacing: 2px;"></span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control shadow-none mt-1  text-dark"
+                  name="captchaInput"
+                  id="captchaUserInput"
+                  placeholder="Enter Captcha"
+                  required
+                  autocomplete="off" />
+                <small id="captchaErrorMsg" class="text-danger"
+                  style="display:none;">Invalid CAPTCHA. Please try
+                  again.</small>
+              </div>
+              <!-- Submit -->
+              <div class="col-lg-4 mb-2 mb-lg-0">
+                <button type="submit"
+                  class="btn text-light w-100 shadow-none custom-bg d-flex justify-content-center align-items-center"
+                  name="site-visit"
+                  value="site_visit"
+                  id="sv-btn"
+                  style="background-color:#2c5f2d;; height: 40px;">
+                  Submit
+                </button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- about pushpam sanskruti -->
+    <div class="about-project" id="about">
+      <div class="container">
+        <div class="row g-lg-5">
+          <div class="col-md-7">
+            <h1 class="highlight text-center text-lg-start">Redefining Premium
+              Living <br> in Katraj</h1>
+            <p class=" lh-lg my-4 text-center text-lg-start">
+              Kakkad Ambiience Vivanta, Katraj is a premium residential project
+              by Kakkad Group & Ambiience Group, located near ISKCON Temple,
+              Katraj–Kondhwa Road, South Pune.
+              It offers 2 & 3 BHK luxury apartments with the option of Jodi
+              flats, blending modern architecture with spiritual surroundings.
+
+              This GEM Platinum-rated project comprises 2 towers of G + 18
+              storeys, featuring thoughtfully designed homes that ensure
+              comfort, elegance, and functionality for every family.
+            </p>
+
+          </div>
+          <div class="col-md-5  ps-0 mt-5 mt-lg-0">
+
+            <div class="video-wrapper rounded">
+ <iframe class="responsive-iframe rounded"
+                src="https://www.youtube.com/embed/Rz7yvqgRu7o?si=iHOFKTTTOWcD8i4q" 
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                title="YouTube video player">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal form -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title fs-5" id="exampleModalLabel">Download
+              Brochure</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <!-- Download Brochure Form -->
+            <form action="./db.php" method="post" class="mt-3" id="dbForm">
+
+              <div class="row gx-2">
+                <!-- Name -->
+                <div class="col-6 mb-4">
+                  <input class="form-control text-dark" type="text" name="name"
+                    placeholder="Enter Name" required
+                    pattern="^[A-Za-z\s]{2,50}$"
+                    title="Only letters and spaces allowed (2-50 characters)">
+                </div>
+
+                <input type="hidden" name="extract">
+
+                <!-- Contact Number -->
+                <div class="col-6 mb-4">
+                  <input class="form-control text-dark" type="text"
+                    name="contact" placeholder="Enter Contact No." required
+                    pattern="^\d{10}$" title="Enter a 10-digit contact number">
+                </div>
+
+                <!-- Email -->
+                <div class="col-6 mb-4">
+                  <input class="form-control text-dark" type="email"
+                    name="email" placeholder="Enter Email Id" required
+                    pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Enter a valid email address">
+                </div>
+
+                <!-- CAPTCHA -->
+                <div class="col-6 mb-4">
+                  <div class="d-flex align-items-center" style="height: 38px;">
+                    <label for="captchaInput2"
+                      class="form-label bg-secondary text-white m-0 d-flex align-items-center px-3"
+                      style="height: 100%; border-radius: 0.375rem;">
+                      <strong id="captchaText2" class="me-2"></strong>
+                    </label>
+                    <input class="form-control text-dark ms-2" type="text"
+                      name="captchaInput" id="captchaInput2"
+                      placeholder="Captcha" required autocomplete="off"
+                      style="height: 100%;">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal Footer -->
+              <div class="modal-footer mt-3">
+                <button type="button" class="btn btn-secondary"
+                  data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" name="form_type"
+                  value="download_brochure">Submit</button>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--9 resons  -->
+
+    <!-- Property Highlights -->
+    <div class="property">
+      <div class="container mb-5">
+        <h2 class="highlight text-center">
+          KATRAJ : WHERE TRADITION MEETS TOMORROW </h2>
+        <div
+          class=" property-highlight-card-content mt-3 mt-md-3  text-center ">
+          Surrounded by temples and cultural landmarks, yet connected by
+          highways, metro lines and city conveniences, Katraj is a location that
+          honours the past while embracing the future.
+        </div>
+
+      </div>
+      <!-- =========================table========================== -->
+      <div id="info">
+        <section>
+          <div style="overflow:hidden;">
+
+            <div style="overflow-x:auto;">
+              <div class="container">
+                <div class="img-p"><img class="img-fluid "
+                    src="./images/p-1.PNG" alt></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="vCurtain"
+          style="--colorFill: rgb(2, 2, 2); --colorTransparent: #020E2100;">
+        </div>
+      </div>
+      <!--==================================== table=========================================== -->
+
+    </div>
+
+    <!-- new amenities section -->
+    <div class="abc-amenities ">
+      <div class="container">
+        <div class="container mb-5">
+          <h2 class="highlight text-center">
+            WHY INVEST IN US</h2>
+          <div
+            class=" property-highlight-card-content mt-3 mt-md-3  text-center ">
+            The Promise of a place that grows with you
+          </div>
+
+        </div>
+        <div class="row justify-content-center g-0">
+          <div
+            class="col-custom d-flex justify-content-center align-items-center mb-3 mb-lg-0">
+
+            <div class="img ">
+              <p class="text-center color-txt" style="color:A72703;">Close to
+                the Sacred <br> & the Familiar</p>
+              <!-- <img class="img-fluid" src="./images/Amenities/Yoga Room.webp" alt="Yoga Room"> -->
+              <div class="px-3 text-center" style="font-size: 13px;">Jain
+                derasars, ISKCON, Aagam Mandir nearby.</div>
+            </div>
+          </div>
+
+          <div class="col-custom  mb-3 mb-lg-0">
+            <div class="art2  d-none d-lg-block"></div>
+            <div class="img">
+
+              <img class="img-fluid" src="./images/Amenities/Restaurant.webp"
+                alt="Restaurant">
+              <div class="overlay">Restaurant</div>
+            </div>
+          </div>
+
+          <div
+            class="col-custom d-flex justify-content-center align-items-center  mb-3 mb-lg-0">
+
+            <div class="img ">
+              <p class="text-center color-txt" style="color:A72703;">Lifestyle
+                <br>& Learning</p>
+              <!-- <img class="img-fluid" src="./images/Amenities/Yoga Room.webp" alt="Yoga Room"> -->
+              <div class="px-3 text-center" style="font-size: 13px;">Schools,
+                colleges, malls and healthcare all within reach.</div>
+            </div>
+          </div>
+
+          <div class="col-custom  mb-3 mb-lg-0">
+            <div class="art2  d-none d-lg-block"></div>
+            <div class="img">
+              <img class="img-fluid" src="./images/Amenities/Clubhouse.webp"
+                alt="Clubhouse">
+              <div class="overlay">Clubhouse</div>
+            </div>
+          </div>
+
+          <div
+            class="col-custom d-flex justify-content-center align-items-center  mb-3 mb-lg-0">
+
+            <div class="img ">
+              <p class="text-center color-txt"
+                style="color:A72703;">Future-Ready <br>Growth</p>
+              <!-- <img class="img-fluid" src="./images/Amenities/Yoga Room.webp" alt="Yoga Room"> -->
+              <div class="px-3 text-center" style="font-size: 13px;">Ongoing
+                development, strong rental yield and appreciation
+                potential.</div>
+            </div>
+          </div>
+
+          <div class="col-custom  mb-3 mb-lg-0">
+            <div class="art d-none d-lg-block"></div>
+            <div class="img">
+
+              <img class="img-fluid" src="./images/Amenities/Swimming pool.webp"
+                alt="Swimming Pool">
+              <div class="overlay">Swimming Pool</div>
+            </div>
+          </div>
+
+          <div
+            class="col-custom d-flex justify-content-center align-items-center  mb-3 mb-lg-0">
+
+            <div class="img ">
+              <p class="text-center color-txt" style="color:A72703;">Effortless
+                <br> Connectivity</p>
+              <!-- <img class="img-fluid" src="./images/Amenities/Yoga Room.webp" alt="Yoga Room"> -->
+              <div class="px-3 text-center" style="font-size: 13px;">Linked to
+                IT hubs, NH-48, Pune-Satara Road; metro on the way.</div>
+            </div>
+          </div>
+
+          <div class="col-custom  mb-3 mb-lg-0">
+            <div class="art d-none d-lg-block"></div>
+            <div class="img">
+              <img class="img-fluid"
+                src="./images/Amenities/Organic Farming.webp"
+                alt="Organic Farming">
+              <div class="overlay">Organic Farming</div>
+            </div>
+          </div>
+
+          <div
+            class="col-custom d-flex justify-content-center align-items-center  mb-3 mb-lg-0">
+
+            <div class="img ">
+              <p class="text-center color-txt"
+                style="color:A72703;">Affordability Meets <br> Aspiration</p>
+              <!-- <img class="img-fluid" src="./images/Amenities/Yoga Room.webp" alt="Yoga Room"> -->
+              <div class="px-3 text-center" style="font-size: 13px;">Attractive
+                price points with rising demand.</div>
+            </div>
+          </div>
+
+          <div class="col-custom  mb-3 mb-lg-0">
+            <div class="art d-none d-lg-block"></div>
+            <div class="img">
+              <img class="img-fluid"
+                src="./images/Amenities/Organic Farming.webp"
+                alt="Children Play Area">
+              <div class="overlay">Children Play Area</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about pushpam sanskruti -->
+    <div class="nearbay" id>
+      <div class style="overflow: hidden;">
+        <div class="container ">
+          <h2 class="highlight text-center">
+            LIFE WITHIN REACH</h2>
+
+        </div>
+        <div class="row ">
+          <div class="col-md-12 ">
+            <!-- Nearby Locations Section -->
+            <section class="nearby-locations pt-5">
+              <div class="container">
+                <div class="row g-lg-5">
+                  <!-- Left Column -->
+                  <div class="col-md-4">
+                    <div class="category">
+                      <h5><i class="fa-solid fa-building"></i> IT PARKS &
+                        WORKPLACES</h5>
+                      <ul>
+                        <li>Cybercity Magarpatta <span>13 km</span></li>
+                        <li>Eon IT Park, Kharadi <span>18 km</span></li>
+                        <li>Commerzee Zone, Yerawada <span>18 km</span></li>
+                      </ul>
+                    </div>
+
+                    <div class="category">
+                      <h5><i class="fa-solid fa-school"></i> EDUCATIONAL
+                        INSTITUTIONS</h5>
+                      <ul>
+                        <li>Orchids International <span>4 km</span></li>
+                        <li>Sanskriti School <span>4.6 km</span></li>
+                        <li>EuroKids School <span>4.7 km</span></li>
+                        <li>Delhi Public School <span>6.5 km</span></li>
+                        <li>Dhruv School <span>5.4 km</span></li>
+                        <li>R2MS School <span>5.5 km</span></li>
+                      </ul>
+                    </div>
+                    <div class="category">
+                      <h5><i class="fa-solid fa-shop"></i> SHOPPING AND
+                        ENTERTAINMENT</h5>
+                      <ul>
+                        <li>Bizzbay mall <span>4.2 km</span></li>
+                        <li>Cru mall <span>4.4 km</span></li>
+                        <li>Royal heritage mall <span>4.5 km</span></li>
+                        <li>Lighthouse mall <span>4.7 km</span></li>
+                        <li>Gera mall <span>4.8 km</span></li>
+                        <li>Kumar pacific mall <span>7.7 km</span></li>
+                        <li>The pavillion mall <span>13 km</span></li>
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <!-- Right Column -->
+                  <div class="col-md-4">
+                    <div class="category">
+                      <h5><i class="fa-solid fa-bus"></i> TRANSPORT</h5>
+                      <ul>
+                        <li>Closest bus stop <span>100 m</span></li>
+                        <li>Pune railway station <span>12 km</span></li>
+                        <li>Airport <span>18 km</span></li>
+                      </ul>
+                    </div>
+                    <div class="category">
+                      <h5><i class="fa-solid fa-utensils"></i> HOTELS /
+                        RESTAURANTS</h5>
+                      <ul>
+                        <li>Kanha pure veg <span>1 km</span></li>
+                        <li>Hotel viraj <span>1.2 km</span></li>
+                        <li>Omkar pride <span>2.3 km</span></li>
+                        <li>Hotel hmr royal inn <span>3.2 km</span></li>
+                        <li>Hotel ellora park <span>5.2 km</span></li>
+                        <li>The grand imperial <span>8.8 km</span></li>
+                      </ul>
+                    </div>
+                    <div class="category">
+                      <h5><i class="fa-solid fa-hospital"></i> HOSPITALS</h5>
+                      <ul>
+                        <li>Namo Hospital <span>1.3 km</span></li>
+                        <li>Care multispeciality hospital <span>2.3
+                            km</span></li>
+                        <li>Global health care hospital <span>3.2 km</span></li>
+                        <li>Sai sneha hospital <span>3.3 km</span></li>
+                        <li>Shivneri hospital <span>3.6 km</span></li>
+                        <li>Om hospital <span>3.9 km</span></li>
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <!-- 3rd -->
+                  <div class="col-lg-4">
+
+                    <div class="category">
+                      <h5><i class="fa-solid fa-cart-shopping"></i> GROCERY /
+                        RETAIL</h5>
+                      <ul>
+                        <li>Reliance digital <span>3.6 km</span></li>
+                        <li>Croma <span>3.8 km</span></li>
+                        <li>Star market <span>5.8 km</span></li>
+                        <li>KK market <span>6.3 km</span></li>
+                      </ul>
+                    </div>
+
+                    <div class="category">
+                      <h5><i class="fa-solid fa-place-of-worship"></i>
+                        TEMPLES</h5>
+                      <ul>
+                        <li>Iskcon NVCC <span>0.5 km</span></li>
+                        <li>Katraj jain temple, aagam mandir <span>4.3
+                            km</span></li>
+                        <li>Narayani dham Katraj <span>4.4 km</span></li>
+                        <li>Shree sadguru shankar maharaj samadhi math <span>5.7
+                            km</span></li>
+                        <li>Shri taljai mata devasthan <span>6.6 km</span></li>
+                        <li>Baps shri swaminarayan temple <span>7.4
+                            km</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+          <!-- <div class="col-md-12  ps-0 mt-5 mt-lg-0">
+
+          <div>
+            <img class="img-fluid w-100" src="./images/p02.PNG" alt="">
+          </div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- amenities -->
+    <div class="amenities"  id="Amenities">
+      <div class="container">
+        <h2 class="highlight text-center">AMENITIES</h2>
+       <div class="row d-flex justify-content-between align-items-center mt-4">
+  <div class="col-md-12 property-highlight-card-content pt-4 position-relative">
+    <ul
+      class="d-flex flex-wrap justify-content-center justify-content-md-around explore position-relative ps-0 gap-2">
+      <li class="toggle-btn px-3 py-2 text-center" data-target="#section-one">
+        WELLNESS & REJUVENATION
+      </li>
+      <li class="toggle-btn px-3 py-2 text-center" data-target="#section-two">
+        FITNESS & ACTIVE LIVING
+      </li>
+      <li class="toggle-btn px-3 py-2 text-center" data-target="#section-three">
+        PLAY & RECREATION
+      </li>
+      <li class="toggle-btn px-3 py-2 text-center" data-target="#section-four">
+        INDOOR LEISURE & GAMES
+      </li>
+      <li class="toggle-btn px-3 py-2 text-center" data-target="#section-five">
+        LANDSCAPES & RETREATS
+      </li>
+    </ul>
+    <div class="line w-100"></div>
+  </div>
+</div>
+
+        <div id="section-one" class="row  my-5 align-items-stretch">
+          <!-- First Column (100% height) -->
+          <div class="col-md-4 text-center text-lg-start mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/New/swiming.webp" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Infinity swimming pool</p>
+            </div>
+          </div>
+
+          <!-- Second Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/New/swiming.webp" alt="Infinity Pool" />
+              <p class="mt-2 infinity"> Baby pool </p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img mb-3 mb-lg-0">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Jacuzzi </p>
+            </div>
+          </div>
+
+          <!-- Third Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Steam room Massage room </p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Meditation deck
+</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="section-two" class="row my-5">
+           <!-- First Column (100% height) -->
+          <div class="col-md-4 text-center text-lg-start mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Gym & fitness zone</p>
+            </div>
+          </div>
+
+          <!-- Second Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Yoga court </p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img mb-3 mb-lg-0">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Pickleball court Badminton court</p>
+            </div>
+          </div>
+
+          <!-- Third Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Box cricket </p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Basketball court</p>
+            </div>
+          </div>
+        </div>
+        <div id="section-three" class="row my-5">
+            <!-- First Column (100% height) -->
+          <div class="col-md-4 text-center text-lg-start mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Pool volleyball </p>
+            </div>
+          </div>
+
+          <!-- Second Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Rock climbing wall </p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Kids’ play area</p>
+            </div>
+          </div>
+
+          <!-- Third Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Rummy table</p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Poker table</p>
+            </div>
+          </div>
+        </div>
+        <div id="section-four" class="row my-5">
+            <!-- First Column (100% height) -->
+          <div class="col-md-4 text-center text-lg-start mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Carom board </p>
+            </div>
+          </div>
+
+          <!-- Second Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Pool table </p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Chess board</p>
+            </div>
+          </div>
+
+          <!-- Third Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Foosball table </p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Table tennis </p>
+            </div>
+          </div>
+        </div>
+
+         <div id="section-five" class="row my-5">
+            <!-- First Column (100% height) -->
+          <div class="col-md-4 text-center text-lg-start mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Sculpture otta  </p>
+            </div>
+          </div>
+
+          <!-- Second Column (50% + 50%) -->
+          <div class="col-md-4 text-center text-lg-start d-flex flex-column mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Pergola & bougainvillea arbor Senior citizen sit-outs </p>
+            </div>
+            <div
+              class="h-100 mt-3 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Seating zones </p>
+            </div>
+          </div>
+
+          <!-- Third Column (50% + 50%) -->
+           <div class="col-md-4 text-center text-lg-start">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/floorplan/Ground Floor.jpg" alt="Infinity Pool" />
+              <p class="mt-2 infinity">Grand entrance pathway
+ </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="d-flex justify-content-center pb-5">
+          <div class="mt-5 m-auto">
+            <a href class="text-uppercase button " data-bs-toggle="modal"
+              data-bs-target="#exampleModal">DOWNLOAD BROCHURE</a>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+
+    <!--9 resons  -->
+       <!-- about pushpam sanskruti -->
+    <div class="nearbay2" id>
+      <div class style="overflow: hidden;">
+        <div class="container ">
+          <h2 class="highlight text-center">
+           PERFECT SPECIFICATIONS </h2>
+
+        </div>
+        <div class="row ">
+          <div class="col-md-12 ">
+            <!-- Nearby Locations Section -->
+            <section class="nearby-locations pt-5">
+              <div class="container">
+                <div class="row g-lg-5">
+  <!-- Left Column -->
+  <div class="col-md-6">
+    <div class="category">
+      <h5><i class="fa-solid fa-building"></i> PROJECT FEATURES</h5>
+      <ul>
+        <li class="specification">⦁	 Gem certified platinum rated project</li>
+        <li class="specification">⦁	 Vaastu compliant</li>
+        <li class="specification">⦁	 Designer entrance lobby</li>
+        <li class="specification">⦁	 Earthquake resistance RCC framing structure</li>
+        <li class="specification">⦁	 Energy efficient common lighting</li>
+        <li class="specification">⦁	 Multi level parking</li>
+        <li class="specification">⦁	 High speed branded elevators</li>
+        <li class="specification">⦁	 Rain water harvesting</li>
+        <li class="specification">⦁	 24 × 7 security with CCTV</li>
+        <li class="specification">⦁	 Solar heated water for common toilets</li>
+        <li class="specification">⦁	 Firefighting system as per norms</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h5><i class="fa-solid fa-house"></i> APARTMENT FEATURES</h5>
+
+      <h5><i class="fa-solid fa-border-all"></i> Flooring and Dado Tiles</h5>
+      <ul>
+        <li class="specification">⦁	 Living room, dining, kitchen and all bedrooms vitrified tiles</li>
+        <li class="specification">⦁	 Toilets, terraces & balcony – anti skid vitrified tiles</li>
+        <li class="specification">⦁	 Designer tiles in toilets up to lintel level</li>
+        <li class="specification">⦁	 Dado tiles above kitchen platform</li>
+      </ul>
+
+      <h5><i class="fa-solid fa-kitchen-set"></i> Kitchen</h5>
+      <ul>
+        <li class="specification">⦁	 Granite platform with stainless steel sink</li>
+        <li class="specification">⦁	 Provision for water purifier</li>
+        <li class="specification">⦁	 Ample electrical points for appliances</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="col-md-6">
+    <div class="category">
+      <h5><i class="fa-solid fa-border-all"></i> WALLS AND FINISHES</h5>
+      <ul>
+        <li class="specification">⦁	 All external and internal walls in AAC block</li>
+        <li class="specification">⦁	 Gypsum punning and low VOC paint (GEM norms) for all internal walls</li>
+        <li class="specification">⦁	 External walls finished with sand faced plaster with acrylic paint</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h5><i class="fa-solid fa-bolt"></i> ELECTRIFICATION AND PLUMBING</h5>
+      <ul>
+        <li class="specification">⦁	 Concealed copper wiring with modular switches in entire flat</li>
+        <li class="specification">⦁	 TV and internet points in living room</li>
+        <li class="specification">⦁	 Video door phone for all apartment</li>
+        <li class="specification">⦁	 DG backup for common areas</li>
+        <li class="specification">⦁	 Exhaust fan in kitchen and toilets</li>
+        <li class="specification">⦁	 Kohler brand CP and sanitary fittings</li>
+        <li class="specification">⦁	 Concealed plumbing system</li>
+        <li class="specification">⦁	 Provision for split air-conditioning in all rooms</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h5><i class="fa-solid fa-door-closed"></i> DOORS AND WINDOWS</h5>
+      <ul>
+        <li class="specification">⦁	 Main doors and all internal doors will be post form doors with laminate on both sides</li>
+        <li class="specification">⦁	 Sliding shutters with mosquito net for all windows and terraces doors</li>
+        <li class="specification">⦁	 UPVC window in bedrooms, living room, kitchen</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+              </div>
+            </section>
+
+          </div>
+          <!-- <div class="col-md-12  ps-0 mt-5 mt-lg-0">
+
+          <div>
+            <img class="img-fluid w-100" src="./images/p02.PNG" alt="">
+          </div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+<!-- amenities -->
+    <div class="amenities" id="Site_Plan">
+      <div class="container">
+        <h2 class="highlight text-center">FLOOR PLAN</h2>
+       
+
+        <div id="" class="row  my-5 align-items-stretch d-flex">
+          <!-- First Column (100% height) -->
+          <div class="col-md-4 text-center text-lg-start mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/New/MASTER PLAN.webp" alt="Infinity Pool" />
+              <p class="mt-2 infinity2">MASTER PLAN</p>
+            </div>
+          </div>
+          <!-- First Column (100% height) -->
+          <div class="col-md-4 text-center text-lg-start mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/New/2bhk.webp" alt="Infinity Pool" />
+              <p class="mt-2 infinity2 ">2 BHK</p>
+            </div>
+          </div>
+          <!-- First Column (100% height) -->
+          <div class="col-md-4 text-center text-lg-start mb-3 mb-lg-0">
+            <div
+              class="h-100 d-flex flex-column justify-content-between amt-img">
+              <img class="img-fluid h-100 object-fit-cover"
+                src="./images/New/3BHK.webp" alt="Infinity Pool" />
+              <p class="mt-2 infinity2">3 BHK</p>
+            </div>
+          </div>
+
+         
+        </div>
+
+       <div class="d-flex justify-content-center pb-5">
+        <div class="mt-5 m-auto">
+          <a href="" class="text-uppercase button " data-bs-toggle="modal" data-bs-target="#exampleModal">DOWNLOAD BROCHURE</a>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <!-- new amenities mobile section -->
+
+      <!-- gallery -->
+      <!-- <div class="gallery" id="Gallery">
+        <div class="container d-lg-block justify-content-between ">
+          <div class="container">
+            <h2 class="highlight mb-5 text-center ">Gallery</h2>
+          </div>
+          <div class="row g-2 ">
+            <div class="col-lg-3">
+              <a href="./images/gallery/g1.webp" data-fancybox="gallery"
+                data-caption="Stylish Living Area (A)">
+                <img class="img-fluid" src="./images/gallery/g1.webp"
+                  alt="Stylish Living Area (A)">
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="./images/gallery/g2.webp" data-fancybox="gallery"
+                data-caption="Fully Equipped Kitchenette">
+                <img class="img-fluid" src="./images/gallery/g2.webp"
+                  alt="Fully Equipped Kitchenette">
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="./images/gallery/g3.webp" data-fancybox="gallery"
+                data-caption="TV unit">
+                <img class="img-fluid" src="./images/gallery/g3.webp"
+                  alt="TV unit">
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="./images/gallery/g4.webp" data-fancybox="gallery"
+                data-caption="Luxurious Bedroom">
+                <img class="img-fluid" src="./images/gallery/g4.webp"
+                  alt="Luxurious Bedroom">
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="./images/gallery/g5.webp" data-fancybox="gallery"
+                data-caption="Dedicated TV unit for bedroom">
+                <img class="img-fluid" src="./images/gallery/g5.webp"
+                  alt="Dedicated TV unit for bedroom">
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="./images/gallery/g6.webp" data-fancybox="gallery"
+                data-caption="Stylish Living Area (B)">
+                <img class="img-fluid" src="./images/gallery/g6.webp"
+                  alt="Stylish Living Area (B)">
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="./images/gallery/g5.webp" data-fancybox="gallery"
+                data-caption="Dedicated TV unit for bedroom">
+                <img class="img-fluid" src="./images/gallery/g5.webp"
+                  alt="Dedicated TV unit for bedroom">
+              </a>
+            </div>
+            <div class="col-lg-3">
+              <a href="./images/gallery/g6.webp" data-fancybox="gallery"
+                data-caption="Stylish Living Area (B)">
+                <img class="img-fluid" src="./images/gallery/g6.webp"
+                  alt="Stylish Living Area (B)">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+ <!-- about pushpam sanskruti -->
+    <div class="about-group" id="about">
+       <div class="container mb-5">
+        <h2 class="highlight text-center">
+         Building Trust Since 1986 </h2>
+        <div
+          class=" mt-3 mt-md-4  text-justify ">
+        Since 1986–87, Kakkad-Ambiience Group has been a name synonymous with trust, quality, and sustainable excellence in Pune's real estate landscape. What began as a vision rooted in sincerity and craftsmanship has grown into a legacy of projects that balance elegance with environmental responsibility.
+        </div>
+         <div class="legacy-right d-flex mt-5 justify-content-between">
+    <div class="stat-box text-center">
+      <i class="fa-regular fa-calendar"></i>
+      <h2 class="number">37+</h2>
+      <p>Years of Trusted <br> Legacy</p>
+    </div>
+    <div class="stat-box text-center">
+      <i class="fa-solid fa-building"></i>
+      <h2 class="number">30+</h2>
+      <p>Delivered <br>Projects</p>
+    </div>
+    <div class="stat-box text-center">
+      <i class="fa-solid fa-house"></i>
+      <h2 class="number">5</h2>
+      <p>Million sq.ft. <br> Completed</p>
+    </div>
+    <div class="stat-box text-center">
+      <i class="fa-solid fa-city"></i>
+      <h2 class="number">2.5</h2>
+      <p>Million sq.ft. <br>Under Development</p>
+    </div>
+  </div>
+
+      </div>
+
+    </div>
+     <div class="map-section">
+       <div class="container">
+        <div class="row gx-lg-4 justify-content-center m-lg-5">
+          <div class="col-md-6">
+            <h4 class="text-start">Get In Touch</h6>
+            <form action="./submit.php" method="post" class="mt-4 mt-lg-2"
+              id="footer">
+
+              <!--Hidden Fields Ends here-->
+
+              <div class="mb-3">
+                <input type="text" id="name"
+                  class="form-control text-dark p-lg-2" placeholder="Name*"
+                  name="name" required
+                  pattern="^[A-Za-z\s]{2,50}$"
+                  title="Only letters and spaces allowed (2-50 characters)">
+              </div>
+              <div class="mb-3">
+                <input type="email" id="email"
+                  class="form-control text-dark p-lg-2" placeholder="E-mail*"
+                  name="email" required
+                  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Enter a valid email address">
+              </div>
+              <input type="hidden" name="field" id>
+              <div class="mb-3">
+                <input type="text" id="phone"
+                  class="form-control text-dark  p-lg-2" name="contact"
+                  placeholder="contact no.*" required
+                  pattern="^\d{10}$" title="Enter a 10-digit contact number">
+              </div>
+
+              <!-- CAPTCHA Row -->
+              <div class="mb-3 row align-items-center">
+                <div class="col-auto">
+                  <span id="captchaText" class="fw-bold fs-5"></span>
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-sm btn-secondary"
+                    onclick="generateCaptcha()">↻</button>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control  text-dark p-lg-2"
+                    id="captchaInput" placeholder="Enter CAPTCHA" required>
+                  <div id="captchaError" class="text-danger mt-1"
+                    style="display:none;">CAPTCHA does not match</div>
+                </div>
+
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-submit  p-lg-2"
+                  name="submit-btn">Send</button>
+              </div>
+            </form>
+
+          </div>
+          <div class="col-md-6 map-container mt-5 mt-lg-0">
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8383.855519868004!2d73.87938015790067!3d18.4521113878328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb001b8a19c9%3A0x6abe905b0469358d!2sAMBIIENCE%20VIVANTA!5e0!3m2!1sen!2sin!4v1761792840904!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8383.855519868004!2d73.87938015790067!3d18.4521113878328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb001b8a19c9%3A0x6abe905b0469358d!2sAMBIIENCE%20VIVANTA!5e0!3m2!1sen!2sin!4v1761792840904!5m2!1sen!2sin"
+              allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+     </div>
+      <section class="contact-section text-center" id="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+
+          <!-- <div class="footer-line mt-5"></div> -->
+
+          <div class="row text-center">
+            <div class="col-md-4 info-box my-5">
+              <h5 class="mb-3">Call Us On</h5>
+              <p><i class="bi bi-telephone-fill"></i><a href="tel:+911232342341"
+                  class="text-decoration-none text-light"> +91 123 234 2341
+                </a></p>
+              <!-- <p class="mt-2"><i class="bi bi-telephone-fill"></i><a href="tel:+917887886114" class="text-decoration-none text-light"> +91 78878 86114</a></p> -->
+              <div class="social-icons mt-4">
+                <a href="https://www.facebook.com/PushpamInfra"><i
+                    class="bi bi-facebook fs-5"></i></a>
+                <a href="https://www.instagram.com/pushpaminfra/"><i
+                    class="bi bi-instagram fs-5"></i></a>
+                <a href="https://www.linkedin.com/company/pushpam-infra"><i
+                    class="bi bi-linkedin fs-5"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4 info-box my-5 borderline px-lg-5">
+              <h5 class="mb-3">Site Address</h5>
+              <p> Kakkad Ambiience Vivanta , Near Iskcon Temple, Katraj -
+                Kondhwa Road south pune's new Cultural hub.</p>
+            </div>
+            <!-- <div class="col-md-3 info-box my-5 borderline px-lg-5">
+          <h5 class="mb-3">Mumbai Address</h5>
+          <p>Mumbai office - Raheja Platinum, Sagbaug Road,
+            Marol, Andheri (East), Mumbai - 400059.</p>
+        </div> -->
+            <div class="col-md-4 info-box my-5">
+
+              <div>
+                <div><img class="img-fluid" src="./images/background/qr.webp"
+                    width="100px" alt="Luxe 28 - QR"></div>
+                <p style="font-size: 12px;">Maharera No.</p>
+                <p>PM1260002500552</p>
+                <p style="font-size: 12px;">maharera.maharashtra.gov.in</p>
+              </div>
+
+            </div>
+          </div>
+          <!-- <div class="footer-line mb-5"></div> -->
+
+        </div>
+      </section>
+      <!-- <div class="copy bg-dark py-4">
+    <p class="text-light text-center mb-0" style="font-size: 12px;">© Copyright Pushpam Digital Solution. All Rights Reserved</p>
+    <p class="text-center mb-0"><a class="text-center text-light
+  " href="./privacy-policy.php" style="font-size: 12px;">Privacy Policy</a></p>
+  </div> -->
+      <div class="back_to_top">
+        <i class="bi bi-chevron-up fw-bold"></i>
+
+      </div>
+      <!-- The audio element -->
+      <audio id="clickSound" src="audio.mp3" preload="auto"></audio>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+      <!-- Owl Carousel JS -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <!-- carousal -->
+      <script>
+    $(document).ready(function() {
+      $(".propertyhighlight").owlCarousel({
+        loop: true,
+        margin: 25,
+        autoplayTimeout: 3000,
+        autoplay: true,
+        nav: true,
+        navText: [
+          "<i class='bi bi-arrow-left'></i>",
+          "<i class='bi bi-arrow-right'></i>",
+        ],
+        dots: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 4,
+          },
+        },
+      });
+    });
+    $(".dev2.owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        576: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        992: {
+          items: 4
+        }
+      }
+    });
+  </script>
+      <script>
+    $(document).ready(function() {
+      $(".dev").owlCarousel({
+        loop: true,
+        margin: 16,
+        autoplayTimeout: 3000,
+        autoplay: true,
+        nav: true,
+        navText: [
+          "<i class='bi bi-arrow-left'></i>",
+          "<i class='bi bi-arrow-right'></i>",
+        ],
+        dots: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 4,
+          },
+        },
+      });
+    });
+  </script>
+      <!-- amenities mobile -->
+      <script>
+    $(document).ready(function() {
+      $(".dev2.owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          576: {
+            items: 2
+          },
+          768: {
+            items: 3
+          },
+          992: {
+            items: 4
+          }
+        }
+      });
+    });
+  </script>
+      <!-- 1st form -->
+
+      <!-- navigation active class color change -->
+      <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function() {
+          navLinks.forEach((nav) => nav.classList.remove("active"));
+
+          this.classList.add("active");
+        });
+      });
+    });
+  </script>
+      <!-- amenities -->
+      <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll(".row.my-5").forEach((section) => {
+        section.style.display = "none";
+      });
+
+      document.querySelector("#section-one").style.display = "flex";
+
+      function moveLine(button) {
+        const line = document.querySelector(".line");
+        const buttonRect = button.getBoundingClientRect();
+        const containerRect = button
+          .closest(".property-highlight-card-content")
+          .getBoundingClientRect();
+
+        line.style.width = `${buttonRect.width}px`;
+        line.style.left = `${buttonRect.left - containerRect.left}px`;
+      }
+
+      const firstButton = document.querySelector(".toggle-btn");
+      if (firstButton) {
+        firstButton.classList.add("active");
+        moveLine(firstButton);
+      }
+
+      document.querySelectorAll(".toggle-btn").forEach((button) => {
+        button.addEventListener("click", function() {
+          document.querySelectorAll(".toggle-btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          button.classList.add("active");
+
+          moveLine(button);
+
+          document.querySelectorAll(".row.my-5").forEach((section) => {
+            section.style.display = "none";
+          });
+
+          const target = document.querySelector(
+            button.getAttribute("data-target")
+          );
+          if (target) {
+            target.style.display = "flex";
+          }
+        });
+      });
+    });
+  </script>
+      <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const clickSound = document.getElementById("clickSound");
+
+      // Select all buttons with the class 'click-sound-btn'
+      const buttons = document.querySelectorAll(".click-sound-btn");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          clickSound.currentTime = 0;
+          clickSound.play();
+        });
+      });
+    });
+  </script>
+
+      <!-- plan and dimentions -->
+      <script>
+    $(document).ready(function() {
+      $(".flex-one").click(function() {
+        $(".one1").show("slow");
+        $(".two").hide("slow");
+        $(".three").hide("slow");
+        // $(".four").hide("slow");
+      });
+
+      $(".flex-two").click(function() {
+        $(".two").show("slow");
+        $(".one1").hide("slow");
+        $(".three").hide("slow");
+        // $(".four").hide("slow");
+      });
+
+      $(".flex-three").click(function() {
+        $(".three").show("slow");
+        $(".one1").hide("slow");
+        $(".two").hide("slow");
+        // $(".four").hide("slow");
+      });
+      // $(".flex-four").click(function () {
+      //   $(".four").show("slow");
+      //   $(".one1").hide("slow");
+      //   $(".two").hide("slow");
+      //   $(".three").hide("slow");
+      // });
+    });
+  </script>
+
+      <!-- download brochure and site visit -->
+      <script>
+    let generatedCaptcha = '';
+    let Captchafield = '';
+
+    function generateCaptcha(length = 5) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let captcha = '';
+      for (let i = 0; i < length; i++) {
+        captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return captcha;
+    }
+
+    function setCaptcha() {
+      Captchafield = generateCaptcha();
+      const captchaDisplay = document.getElementById('captchaText2');
+      if (captchaDisplay) captchaDisplay.innerText = Captchafield;
+    }
+
+    function setCaptchaa() {
+      generatedCaptcha = generateCaptcha();
+      const captchaLabel = document.getElementById('captchaCodeLabel');
+      if (captchaLabel) captchaLabel.innerText = generatedCaptcha;
+    }
+
+    window.onload = function() {
+      setCaptcha();
+      setCaptchaa();
+
+      const dbForm = document.getElementById('dbForm');
+      dbForm?.addEventListener('submit', function(e) {
+        const userInput = document.getElementById('captchaInput2').value.trim();
+        if (userInput !== Captchafield) {
+          alert('Invalid CAPTCHA. Please try again.');
+          setCaptcha();
+          e.preventDefault();
+        }
+      });
+
+      const siteForm = document.getElementById('siteForm');
+      siteForm?.addEventListener('submit', function(e) {
+        const userInput = document.getElementById('captchaUserInput').value.trim();
+        const errorMsg = document.getElementById('captchaErrorMsg');
+        if (userInput !== generatedCaptcha) {
+          errorMsg.style.display = 'block';
+          setCaptchaa();
+          e.preventDefault();
+        } else {
+          errorMsg.style.display = 'none';
+        }
+      });
+    };
+  </script>
+      <!-- footer form-->
+      <script>
+    const captchaText = document.getElementById('captchaText');
+    const captchaInput = document.getElementById('captchaInput');
+    const captchaError = document.getElementById('captchaError');
+
+    function generateCaptcha() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let captcha = '';
+      for (let i = 0; i < 5; i++) {
+        captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      captchaText.textContent = captcha;
+      return captcha;
+    }
+
+    let currentCaptcha = generateCaptcha();
+
+    // Validate CAPTCHA on submit
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+      if (captchaInput.value.trim().toUpperCase() !== currentCaptcha) {
+        e.preventDefault();
+        captchaError.style.display = 'block';
+        currentCaptcha = generateCaptcha();
+        return false;
+      } else {
+        captchaError.style.display = 'none';
+      }
+    });
+  </script>
+
+      <script>
+    document.querySelectorAll('.floor-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelector('.floor-item.active')?.classList.remove('active');
+        item.classList.add('active');
+      });
+    });
+  </script>
+
+      <script>
+    const accordions = document.querySelectorAll('.contentBx');
+
+    accordions.forEach(item => {
+      item.addEventListener('click', function() {
+        const isActive = this.classList.contains('active');
+
+
+        accordions.forEach(acc => {
+          acc.classList.remove('active');
+          const content = acc.querySelector('.content_label');
+          content.style.height = 0;
+        });
+
+
+        if (!isActive) {
+          this.classList.add('active');
+          const content = this.querySelector('.content_label');
+          content.style.height = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+      <script>
+    Fancybox.bind("[data-fancybox='gallery']", {
+      Thumbs: {
+        type: "classic",
+      }
+    });
+  </script>
+
+      <!-- <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+      <script>
+    let back_to_top = document.querySelector('.back_to_top');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        back_to_top.classList.add('show');
+      } else {
+        back_to_top.classList.remove('show');
+      }
+    });
+    back_to_top.addEventListener('click', function(e) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    });
+  </script>
+      <!-- Include GSAP and ScrollTrigger -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+      <!-- ======================= info ============== -->
+      <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate the vCurtain when the #info section comes into view
+    gsap.to("#info > .vCurtain", {
+      scrollTrigger: {
+        trigger: "#info",
+        start: "top 75%",
+        toggleActions: "play reset play reverse"
+      },
+      duration: 0.8,
+      "--left": "0%",
+      "--right": "100%"
+    });
+  </script>
+      <!-- <script >
+		 $(document).ready(function(){
+           if (window.location.href.indexOf("index.php") > -1) {
+              window.location.replace("https://luxe28.com/")
+        }
+       });
+	</script> -->
+      <!-- AOS JS -->
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+    AOS.init();
+  </script>
+    </body>
+
+  </html>
